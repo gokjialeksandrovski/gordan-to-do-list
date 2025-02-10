@@ -1,0 +1,127 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #ffffff;
+    --text-color: #333;
+    --border-radius: 8px;
+    --edit-color: #ffa500;
+    --delete-color: #ff6666;
+    --completed-text-color: rgba(51, 51, 51, 0.5);
+    --completed-decoration: line-through;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+    margin: 0;
+}
+
+.todo-container {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-color);
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+}
+
+.add-btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+}
+
+.add-btn:hover {
+    background: #45a049;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    background: #e8e8e8;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.task-item.completed {
+    color: var(--completed-text-color);
+    text-decoration: var(--completed-decoration);
+    opacity: 0.6;
+}
+
+.task-text {
+    flex-grow: 1;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.edit-input {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 16px;
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: var(--edit-color);
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #e69500;
+}
+
+.delete-btn {
+    background: var(--delete-color);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #e60000;
+}
